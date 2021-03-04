@@ -1,0 +1,86 @@
+.TrafficLightsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.TrafficLights {
+    background-color: rgb(63, 63, 63);
+    width: 100px;
+    margin: 10px auto 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px solid rgb(231, 231, 231);
+}
+
+.TrafficLightsBar {
+    width: 30px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(158, 158, 158);
+    position: relative;
+}
+
+.TrafficLightsBar::before {
+    content: '';
+    width: 30px;
+    height: 50px;
+    background-color: rgba(114, 113, 113, .6);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .5;
+}
+
+.TrafficLightsBar::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    z-index: -2;
+    background-color: rgba(114, 113, 113, .3);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .5;
+    border-radius: 50%;
+}
+
+.ConfigForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(51, 51, 51, .5);
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.ConfigForm h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+.ConfigForm button {
+    flex-grow: 0;
+    margin: 5px;
+    width: calc(50% - 10px);
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    height: 25px;
+}
+
+.ConfigForm label {
+    margin: 5px 0;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.ConfigForm input {
+    width: calc(100% - 112px);
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+}

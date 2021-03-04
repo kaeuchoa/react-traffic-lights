@@ -1,0 +1,40 @@
+.TrafficLight {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 10px auto;
+    border: 1px solid #919191;
+    position: relative;
+    opacity: .6;
+}
+
+.TrafficLight::before {
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: rgb(141, 141, 141);
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.Red {
+    background-color: rgb(216, 0, 0);
+}
+
+.Yellow {
+    background-color: rgb(223, 200, 0);
+}
+
+.Green {
+    background-color: rgb(51, 218, 0);
+}
+
+.Active {
+    opacity: 1;
+}
